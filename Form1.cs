@@ -8,7 +8,7 @@ namespace Test
         }
 
         double a = 0;
-
+        bool p = false;
         private void timer1_Tick(object sender, EventArgs e)
         {
             progressBar1.Value = (int)a;
@@ -19,8 +19,16 @@ namespace Test
             }
             else
             {
-                MessageBox.Show("축하합니다! 당신은 시간을 낭비했습니다!", "감사합니다", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Environment.Exit(0);
+                if (!p)
+                {
+                    p = true;
+                    DialogResult rel = MessageBox.Show("축하합니다! 당신은 시간을 낭비했습니다!", "감사합니다", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (rel == DialogResult.OK)
+                    {
+                        Environment.Exit(0);
+                    }
+                }
+
             }
         }
 
