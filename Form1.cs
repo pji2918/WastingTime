@@ -1,8 +1,8 @@
 namespace Test
 {
-    public partial class Form1 : Form
+    public partial class WastingTime : Form
     {
-        public Form1()
+        public WastingTime()
         {
             InitializeComponent();
         }
@@ -19,7 +19,7 @@ namespace Test
             }
             else
             {
-                MessageBox.Show("축하합니다! 넌 시간을 낭비했습니다!", "감사합니다", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("축하합니다! 당신은 시간을 낭비했습니다!", "감사합니다", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Environment.Exit(0);
             }
         }
